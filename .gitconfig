@@ -1,0 +1,13 @@
+[user]
+	email = telnetstat@gmail.com
+	name = Daiki Matoba
+[core]
+	editor = vim
+	excludesfile = /home/daiki/.gitignore_global
+[alias]
+	s = status
+	l = log
+	d = diff
+	b = branch
+[push]
+	default = matching
