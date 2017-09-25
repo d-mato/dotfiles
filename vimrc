@@ -103,7 +103,7 @@ vmap <C-c> :TComment<CR>
 " ***********************************
 " NERD Tree
 NeoBundle "scrooloose/nerdtree"
-nnoremap <C-n> :NERDTreeToggle<CR>
+nnoremap <C-n> :NERDTreeToggle<CR>:NERDTreeMirror<CR>
 
 "
 " ***********************************
