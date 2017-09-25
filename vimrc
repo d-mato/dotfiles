@@ -1,12 +1,13 @@
 set tabstop=2
 set shiftwidth=2
-set number
+" set number
 set autoindent
 set expandtab
 set wildmode=list:longest
-set cursorline
-set cursorcolumn
+" set cursorline
+" set cursorcolumn
 set t_Co=256
+set hlsearch
 syntax on
 
 " 改行文字とタブ文字を表示
@@ -45,6 +46,10 @@ set fileencodings=utf-8,euc-jp,sjis,cp932
 nnoremap <S-h> 0
 nnoremap <S-l> $
 
+" escを置換
+noremap <C-j> <esc>
+noremap! <C-j> <esc>
+
 " タブ関連のキーバインド
 " ************************************************
 
@@ -76,6 +81,11 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 " Note: You don't set neobundle setting in .gvimrc!
 "
 " ***********************************
+" textobj
+NeoBundle 'kana/vim-textobj-user'
+NeoBundle 'lucapette/vim-textobj-underscore'
+
+" ***********************************
 " snippet
 NeoBundle 'Shougo/neocomplcache'
 NeoBundle 'Shougo/neosnippet'
@@ -84,6 +94,8 @@ NeoBundle 'Shougo/neosnippet-snippets'
 " color scheme
 NeoBundle 'sickill/vim-monokai'
 NeoBundle 'sjl/badwolf'
+NeoBundle 'vim-scripts/proton'
+NeoBundle 'flazz/vim-colorschemes'
 
 " ***********************************
 " markdown
@@ -101,11 +113,15 @@ vmap <C-c> :TComment<CR>
 
 
 " ***********************************
+" Unite
+NeoBundle 'Shougo/unite.vim'
+nnoremap <C-u> :Unite<CR>
+
+" ***********************************
 " NERD Tree
 NeoBundle "scrooloose/nerdtree"
 nnoremap <C-n> :NERDTreeToggle<CR>:NERDTreeMirror<CR>
 
-"
 " ***********************************
 " javascrip syntax
 NeoBundle 'pangloss/vim-javascript'
@@ -158,6 +174,9 @@ NeoBundle 'bronson/vim-trailing-whitespace'
 NeoBundle 'wakatime/vim-wakatime'
 
 " ***********************************
+NeoBundle 'tpope/vim-surround'
+
+" ***********************************
 " ruby, rails
 NeoBundle 'slim-template/vim-slim'
 autocmd BufNewFile,BufRead *.slim setlocal filetype=slim
@@ -171,6 +190,7 @@ endif
 " ***********************************
 " syntacx test
 NeoBundle 'scrooloose/syntastic.git'
+NeoBundle 'pmsorhaindo/syntastic-local-eslint.vim'
 let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': ['ruby', 'javascript', 'coffee'] }
 let g:syntastic_ruby_checkers = ['rubocop']
 let g:syntastic_javascript_checkers = ['eslint']
@@ -201,6 +221,13 @@ filetype plugin indent on
 " this will conveniently prompt you to install them.
 NeoBundleCheck
 
-colorscheme monokai
-highlight Normal ctermbg=none
-highlight NonText ctermbg=none
+colorscheme github
+" hi Normal ctermbg=none
+" hi NonText ctermbg=none
+hi Search guibg=orange guifg=white
+
+" status line.
+set laststatus=2
+set statusline=%<%f\%m%r%h%w%y%{'['.(&fenc!=''?&fenc:&enc).']['.&ff.']'}%4v\ %l/%L
+set showcmd
+

@@ -3,11 +3,11 @@
 	name = Daiki Matoba
 [core]
 	editor = vim
-	excludesfile = /home/daiki/.gitignore_global
+	excludesfile = ~/.gitignore_global
 [alias]
 	s = status
 	l = log
 	d = diff
 	b = branch
 [push]
-	default = matching
+	default = current
