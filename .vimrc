@@ -46,7 +46,8 @@ set fileencodings=utf-8,euc-jp,sjis,cp932
 nnoremap <S-h> 0
 nnoremap <S-l> $
 
-imap <C-j> <esc>
+" escを置換
+noremap <C-j> <esc>
 noremap! <C-j> <esc>
 
 " タブ関連のキーバインド
@@ -93,6 +94,8 @@ NeoBundle 'Shougo/neosnippet-snippets'
 " color scheme
 NeoBundle 'sickill/vim-monokai'
 NeoBundle 'sjl/badwolf'
+NeoBundle 'vim-scripts/proton'
+NeoBundle 'flazz/vim-colorschemes'
 
 " ***********************************
 " markdown
@@ -112,13 +115,13 @@ vmap <C-c> :TComment<CR>
 " ***********************************
 " Unite
 NeoBundle 'Shougo/unite.vim'
+nnoremap <C-u> :Unite<CR>
 
 " ***********************************
 " NERD Tree
 NeoBundle "scrooloose/nerdtree"
 nnoremap <C-n> :NERDTreeToggle<CR>
 
-"
 " ***********************************
 " javascrip syntax
 NeoBundle 'pangloss/vim-javascript'
@@ -187,6 +190,7 @@ endif
 " ***********************************
 " syntacx test
 NeoBundle 'scrooloose/syntastic.git'
+NeoBundle 'pmsorhaindo/syntastic-local-eslint.vim'
 let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': ['ruby', 'javascript', 'coffee'] }
 let g:syntastic_ruby_checkers = ['rubocop']
 let g:syntastic_javascript_checkers = ['eslint']
@@ -217,10 +221,10 @@ filetype plugin indent on
 " this will conveniently prompt you to install them.
 NeoBundleCheck
 
-colorscheme monokai
-highlight Normal ctermbg=none
-highlight NonText ctermbg=none
-
+colorscheme github
+" hi Normal ctermbg=none
+" hi NonText ctermbg=none
+hi Search guibg=orange guifg=white
 
 " status line.
 set laststatus=2
