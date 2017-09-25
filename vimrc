@@ -159,6 +159,10 @@ NeoBundle 'othree/html5.vim'
 NeoBundle 'hail2u/vim-css3-syntax'
 
 " ***********************************
+" elixir
+NeoBundle 'elixir-editors/vim-elixir'
+
+" ***********************************
 " indent
 NeoBundle 'nathanaelkane/vim-indent-guides'
 " let g:indent_guides_auto_colors = 0
