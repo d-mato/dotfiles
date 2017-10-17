@@ -1,13 +1,14 @@
 [user]
-	email = telnetstat@gmail.com
-	name = Daiki Matoba
+  email = telnetstat@gmail.com
+  name = Daiki Matoba
 [core]
-	editor = vim
-	excludesfile = ~/.gitignore_global
+  editor = vim
+  excludesfile = ~/.gitignore_global
 [alias]
-	s = status
-	l = log
-	d = diff
-	b = branch
+  b = branch
+  co = checkout
+  d = diff
+  l = log
+  s = status
 [push]
-	default = current
+  default = current
