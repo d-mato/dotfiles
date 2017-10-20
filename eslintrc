@@ -1,0 +1,11 @@
+---
+extends: standard
+env:
+  browser: true
+  jquery: true
+rules:
+  camelcase: off
+  max-len:
+   - warn
+   - 160
+  no-console: warn
