@@ -103,14 +103,11 @@ NeoBundle 'flazz/vim-colorschemes'
 NeoBundle 'kannokanno/previm'
 NeoBundle 'tyru/open-browser.vim'
 au BufRead,BufNewFile *.md set filetype=markdown
-let g:previm_open_cmd = 'google-chrome-beta'
+let g:previm_open_cmd = 'open'
 
 " ***********************************
 " comment out
 NeoBundle 'tomtom/tcomment_vim'
-nmap <C-c> :TComment<CR>
-vmap <C-c> :TComment<CR>
-
 
 " ***********************************
 " Unite
