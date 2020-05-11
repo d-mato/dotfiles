@@ -9,6 +9,9 @@ set wildmode=list:longest
 set t_Co=256
 set hlsearch
 syntax on
+if &diff
+    syntax off
+endif
 
 " 改行文字とタブ文字を表示
 set list
