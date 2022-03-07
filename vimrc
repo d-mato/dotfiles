@@ -150,28 +150,6 @@ if !exists('loaded_matchit')
 endif
 
 " ***********************************
-" syntacx test
-Plugin 'scrooloose/syntastic.git'
-Plugin 'pmsorhaindo/syntastic-local-eslint.vim'
-let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': ['ruby', 'javascript', 'coffee'] }
-let g:syntastic_ruby_checkers = ['rubocop']
-let g:syntastic_javascript_checkers = ['eslint']
-" let g:syntastic_javascript_checkers = ['jshint']
-" let g:syntastic_javascript_checkers = ['jslint']
-let g:syntastic_coffee_checkers = ['coffeelint']
-" ここから下は Syntastic のおすすめの設定
-" ref. https://github.com/scrooloose/syntastic#settings
-
-" エラー行に sign を表示
-" let g:syntastic_enable_signs = 1
-" " location list を常に更新
-" let g:syntastic_always_populate_loc_list = 0
-" " location list を常に表示
-" let g:syntastic_auto_loc_list = 0
-" " ファイルを開いた時にチェックを実行する
-" let g:syntastic_check_on_open = 1
-" " :wq で終了する時もチェックする
-" let g:syntastic_check_on_wq = 0
 
 call vundle#end()
 filetype plugin indent on
