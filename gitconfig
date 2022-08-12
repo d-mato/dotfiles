@@ -1,20 +1,21 @@
 [user]
-	email = telnetstat@gmail.com
-	name = Daiki Matoba
+  email = telnetstat@gmail.com
+  name = Daiki Matoba
 [core]
   editor = vim
   excludesfile = ~/.gitignore_global
 [alias]
   b = branch
   co = checkout
-  cm = checkout master
+  cm = !(git checkout $(git name-rev --name-only HEAD))
+  pull = pull --recurse-submodules=yes
   d = diff
   l = log
   s = status
 [push]
   default = current
 [filter "lfs"]
-	required = true
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
+  required = true
+  clean = git-lfs clean -- %f
+  smudge = git-lfs smudge -- %f
+  process = git-lfs filter-process
