@@ -4,8 +4,9 @@
 [core]
   editor = vim
   excludesfile = ~/.gitignore_global
+  ignorecase = false
 [alias]
-  b = branch
+  b = branch -vv
   co = checkout
   cm = !(git co main 2>/dev/null || git co master)
   pull = pull --recurse-submodules=yes
@@ -19,3 +20,7 @@
   clean = git-lfs clean -- %f
   smudge = git-lfs smudge -- %f
   process = git-lfs filter-process
+[merge]
+  tool = vimdiff
+[init]
+  defaultBranch = main
