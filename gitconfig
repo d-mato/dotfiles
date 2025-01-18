@@ -8,7 +8,7 @@
 [alias]
   b = branch -vv
   co = checkout
-  cm = !(git co main 2>/dev/null || git co master)
+  cm = !(git checkout $(git symbolic-ref refs/remotes/origin/HEAD | sed 's!^refs/remotes/origin/!!'))
   pull = pull --recurse-submodules=yes
   d = diff
   l = log
